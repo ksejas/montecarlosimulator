@@ -1,0 +1,13 @@
+test_combo (__main__.AnalyzerTestSuite) ... ok
+test_face_counts_per_roll (__main__.AnalyzerTestSuite) ... ok
+test_jackpot (__main__.AnalyzerTestSuite) ... ok
+test_change_weight_of_a_single_side (__main__.DieTestSuite) ... ok
+test_roll_die (__main__.DieTestSuite) ... ok
+test_view_faces_weights (__main__.DieTestSuite) ... ok
+test_play (__main__.GameTestSuite) ... ok
+test_result_of_recent_play (__main__.GameTestSuite) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.238s
+
+OK
