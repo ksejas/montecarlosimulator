@@ -2,9 +2,12 @@
 
 # Metadata
 Name: Katherine Sejas
+
 Project Name: Monte Carlo Simulator
 
 # Synopsis 
+
+A package that lets you run Monte Carlo experiments. The user defines their "die", which can represent a variety of random variables, which the package utilizes for the random sampling to obtain statistics such as the the number of face counts per roll or the number of times a game results in all faces being identical or overall the number of times each unique combination of faces occurs in a given game (the size of the game is chosen by the user.).
 
 Three simple demonstrations of this code/package and how the classes are used can be found at https://github.com/ksejas/montecarlosimulator/blob/main/montecarlosimulator/montecarlo_demo.ipynb. 
 
@@ -144,6 +147,10 @@ Parameters:
 
 faces_array
 
+Return Values: 
+
+None
+
 # change_weight_of_a_single_side 
 
 Docstring: 
@@ -163,6 +170,10 @@ Parameters:
 face_value
 new_weight
 
+Return Values: 
+
+None
+
 # roll_die 
 
 Docstring:
@@ -176,6 +187,10 @@ Parameters:
 
 number_of_rolls=1
 
+Return Values: 
+
+roll_list (list)
+
 # view_faces_weights
 
 Docstring:
@@ -185,6 +200,10 @@ The view_faces_weights method returns/shows the user the die's current set of fa
 Parameters:
 
 None
+
+Return Values: 
+
+faces_with_weights (dataframe)
 
 # Game
 
@@ -211,6 +230,10 @@ Parameters:
 
 die_object_list
 
+Return Values: 
+
+None
+
 # play
 
 Docstring:
@@ -225,6 +248,10 @@ Docstring:
 Parameters:
 
 number_of_rolls:int
+
+Return Values: 
+
+None
 
 # result_of_recent_play
 
@@ -242,6 +269,17 @@ Parameters:
 
 shape_type:str
 
+Return Values: 
+
+result_of_play
+
+	If the user selects wide as the shape type. 
+	
+result_of_play_t
+
+	If the user selects narrow as the shape type. 
+
+An error "User passed an invalid option for the shape type of the dataframe. A shape type of wide or narrow was not passed." if the user does not provide a valid shape type. 
 
 # Analyzer
 
@@ -271,6 +309,10 @@ Parameters:
 
 game_object
 
+Return Values: 
+
+None
+
 # face_counts_per_roll 
 
 Docstring:
@@ -281,6 +323,10 @@ Docstring:
 Parameters:
 
 None
+
+Return Values: 
+
+faces_with_counts (dataframe)
 
 # jackpot
 
@@ -295,6 +341,10 @@ Parameters:
 
 None
 
+Return Values: 
+
+Returns the number of times a roll resulted in all faces having the same value. 
+
 # combo
 
 Docstring:
@@ -306,3 +356,7 @@ Docstring:
 Parameters:
 
 None
+
+Return Values: 
+
+faces_with_counts_combos
