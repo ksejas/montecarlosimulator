@@ -108,3 +108,112 @@ print(relative_freq_jackpot_unfair_dice)
 
 # API Description 
 
+# Die
+
+Description
+
+    The Die Class creates a die with N sides or faces and assigns a weight to each face. The Die Class
+    has three methods: change_weight_of_a_single_side, roll_die, and view_faces_weights.
+    
+    Note that what we are calling a die can represent a variety of random variables associated with 
+    stochastic processes, such as using a deck of cards or flipping a coin or speaking a language. 
+    The user can create these models by increasing the number of sides and defining the values of their 
+    faces. Our probability models for such variables are, however, very simple, since our weights apply 
+    to single events. The events are assumed to be independent.   
+    
+    The weight assigned to each face defaults to 1.0 when the die object is created. However, by using 
+    the change_weight_of_a_single_side method the default weight assigned to any given face on the die 
+    can be changed to a new weight. The die can be rolled one or more times to select a face, by using 
+    the method roll_die. The user can see the die's current set of faces and weights by using the 
+    view_faces_weights method.  
+    
+The public methods that Die has are: __init__, change_weight_of_a_single_side, roll_die, and view_faces_weights. 
+
+# __init__ 
+
+Docstring: 
+        The __init__ takes one argument, an array that contains the face values of a die called 
+        faces_array. The faces_array may have a data type of strings or numbers. 
+        The face values contained in faces_array must be unique, therefore a test in this __init__
+        is included to verify that there are no duplicate face values. If there is a duplicate then 
+        a message will be printed that warns the user that the faces in faces_array are not unique.
+        The __init__ initializes w as equal to 1.0 for each face, 
+        which represents the defualt weight of each face in faces_array. 
+
+Parameters: 
+
+faces_array
+
+# change_weight_of_a_single_side 
+
+Docstring: 
+
+	The change_weight_of_a_single_side method takes two arguments: face_value and new_weight.
+        The face_value represents the face of the die that should have its weight changed to the new 
+        weight value specified by new_weight. 
+        The method first checks whether the provided face_value is a face on the die object.
+        When the face_value is confirmed as an included value then the new_weight value is checked 
+        to see if it is a float. If the new_weight value is not a float but an integer or a number stored 
+        as a string which can be converted to a float then the value is converted to a float.
+        Otherwise, if the new_weight is not a number then an error message is displayed. If both checks pass
+        then the new weight value is assigned to the specified face.
+
+Parameters:
+
+face_value
+new_weight
+
+# roll_die 
+
+Docstring:
+
+        The roll_die method takes one argument called number_of_rolls, which represents the number
+        of times the die is to be rolled. The default value assigned to the number_of_rolls is 1.
+        The rolling of the die is essentially a random sample from the die faces according to the weights.
+        The results of the die roll are stored in roll_list, which is returned to the user. 
+
+Parameters:
+
+number_of_rolls=1
+
+# view_faces_weights
+
+Docstring:
+
+The view_faces_weights method returns/shows the user the die's current set of faces and weights.
+
+Parameters:
+
+None
+
+# Game
+
+Description
+
+    The Game Class consists of rolling one or more dice of the same kind one or more times. Each die in a 
+    given game has the same number of sides and set of faces, but each die object may have its own weights.
+    The Game Class has two methods: play and result_of_recent_play. 
+
+    The Game Class is initialized with a list of one or more dice. The user will specify how many times
+    to roll the dice(s) as the parameter for the play method. The results of the recent play can be 
+    displayed to the user by using the result_of_recent_play method. 
+    
+The public methods that Game has are: __init__, play, result_of_recent_play
+
+# Analyzer
+
+Description
+
+    The Analyzer Class takes the results of a single game and computes the following statistics by using one of its 
+    three methods:
+        -  The face_counts_per_roll method calculates the number of times a given face is rolled in each event. 
+        
+        -  The jackpot method calculates the number of times a roll resulted in all faces having the same value 
+           such as six twos for a six-sided dice.
+
+        -  The combo method calculates the number of times each distinct combination of faces is rolled.
+
+    The Analyzer Class is initialized with a game object. 
+
+The public methods that Game has are: __init__, face_counts_per_roll, jackpot, combo
+
