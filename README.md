@@ -204,25 +204,43 @@ The public methods that Game has are: __init__, play, result_of_recent_play
 
 Docstring:
 
+        The __init__ takes one argument: the die_object_list is a list of already instantiated 
+        similar Die objects. 
 
 Parameters:
+
+die_object_list
 
 # play
 
 Docstring:
 
+        The play method takes one argument called number_of_rolls, which is an integer that represents the 
+        number of times the dice is to be rolled. The results of the play/rolls are saved in a wide form 
+        dataframe. 
+        The index of the wide form dataframe is called roll_num_index and represents the given roll number. 
+        The columns in the dataframe each represent one die. Each cell for a given roll number and die stores
+        the face resulting from each roll of die. 
 
 Parameters:
+
+number_of_rolls:int
 
 # result_of_recent_play
 
 Docstring:
 
+        The result_of_recent_play method takes one argument called shape_type, which is a string that
+        specifies the dataframe form. The shape_type has two valid values: wide or narrow. If the user 
+        provides a different value for shape_type then an exception is raised. 
+        
+        The play method produces a wide form dataframe therefore this parameter defaults to wide form. 
+        The narrow form dataframe has a two-column index with the roll number and the die number, and 
+        a single column for the face rolled. 
 
 Parameters:
 
-
-
+shape_type:str
 
 
 # Analyzer
