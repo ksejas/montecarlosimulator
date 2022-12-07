@@ -82,7 +82,7 @@ The following code listed below creates an additional dice called unfair_die_typ
 	game_with_five_dice.result_of_recent_play('wide')
 
 
-			dice_0	dice_1	dice_2	dice_3	dice_4
+				dice_0	dice_1	dice_2	dice_3	dice_4
 			roll_num_index					
 			0	6.0	1.0	2.0	5.0	5.0
 			1	5.0	3.0	6.0	5.0	1.0
