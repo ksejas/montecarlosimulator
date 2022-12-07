@@ -31,13 +31,13 @@ faces_array = np.array([1,2,3,4,5,6], dtype = int)
 fair_die = Die(faces_array)
 fair_die.view_faces_weights()
 
-	w	  faces
-0	1.0	1
-1	1.0	2
-2	1.0	3
-3	1.0	4
-4	1.0	5
-5	1.0	6
+					w	  faces
+				0	1.0	1
+				1	1.0	2
+				2	1.0	3
+				3	1.0	4
+				4	1.0	5
+				5	1.0	6
 
 unfair_die_type1 = Die(faces_array)
 unfair_die_type1.change_weight_of_a_single_side(6, 5)
