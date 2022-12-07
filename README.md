@@ -200,6 +200,31 @@ Description
     
 The public methods that Game has are: __init__, play, result_of_recent_play
 
+# __init__
+
+Docstring:
+
+
+Parameters:
+
+# play
+
+Docstring:
+
+
+Parameters:
+
+# result_of_recent_play
+
+Docstring:
+
+
+Parameters:
+
+
+
+
+
 # Analyzer
 
 Description
@@ -215,5 +240,51 @@ Description
 
     The Analyzer Class is initialized with a game object. 
 
-The public methods that Game has are: __init__, face_counts_per_roll, jackpot, combo
+The public methods that Analyzer has are: __init__, face_counts_per_roll, jackpot, combo
 
+# __init__ 
+
+Docstring:
+
+        The __init__ takes one argument: the game_object. 
+        The __init__ then takes the game_object and infers the data type of the die faces.
+
+Parameters:
+
+game_object
+
+# face_counts_per_roll 
+
+Docstring:
+
+        The face_counts_per_roll method calculates the number of times a given face is rolled in each event and stores the results
+        in a wide form dataframe that has an index of the roll number and face values as columns. 
+
+Parameters:
+
+None
+
+# jackpot
+
+Docstring:
+
+        The jackpot method calculates and returns the number of times a roll resulted in all faces having the same value 
+        such as six twos for a six-sided dice.
+        The jackpot method also stores the results in the faces_with_counts_sel dataframe which has a column called jackpot
+        that identifies the observation/roll number that resulted in all faces having the same value. 
+
+Parameters:
+
+None
+
+# combo
+
+Docstring:
+
+        The combo method calculates the number of times each distinct combination of faces is rolled.
+        The results are saved in a dataframe called faces_with_counts_combos, which has the combinations identified by the
+        sorted multi-columned index. 
+	
+Parameters:
+
+None
