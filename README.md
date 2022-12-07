@@ -31,7 +31,7 @@ faces_array = np.array([1,2,3,4,5,6], dtype = int)
 fair_die = Die(faces_array)
 fair_die.view_faces_weights()
 
-					w	  faces
+					w	faces
 				0	1.0	1
 				1	1.0	2
 				2	1.0	3
@@ -43,13 +43,13 @@ unfair_die_type1 = Die(faces_array)
 unfair_die_type1.change_weight_of_a_single_side(6, 5)
 unfair_die_type1.view_faces_weights()
 
-  w	  faces
-0	1.0	1
-1	1.0	2
-2	1.0	3
-3	1.0	4
-4	1.0	5
-5	5.0	6
+				        w	faces
+				0	1.0	1
+				1	1.0	2
+				2	1.0	3
+				3	1.0	4
+				4	1.0	5
+				5	5.0	6
 
 
 # Playing games 
@@ -60,13 +60,13 @@ unfair_die_type2 = Die(faces_array)
 unfair_die_type2.change_weight_of_a_single_side(1, 5)
 unfair_die_type2.view_faces_weights()
 
-	w	  faces
-0	5.0	1
-1	1.0	2
-2	1.0	3
-3	1.0	4
-4	1.0	5
-5	1.0	6
+					w	faces
+				0	5.0	1
+				1	1.0	2
+				2	1.0	3
+				3	1.0	4
+				4	1.0	5
+				5	1.0	6
 
 two_unfair_type1_one_unfair_type2_two_fair_dice = []
 
@@ -80,19 +80,20 @@ game_with_five_dice = Game(two_unfair_type1_one_unfair_type2_two_fair_dice)
 game_with_five_dice.play(10000)
 game_with_five_dice.result_of_recent_play('wide')
 
-	              dice_0	dice_1	dice_2	dice_3	dice_4
-roll_num_index					
-0	              6.0	    1.0   	2.0	    5.0   	5.0
-1		            5.0	    3.0	    6.0	    5.0   	1.0
-2		            3.0   	5.0	    6.0	    3.0   	6.0
-3		            4.0   	3.0	    6.0   	2.0	    1.0
-4		            6.0   	4.0	    6.0   	2.0   	6.0
-...	...	...	...	...	...
-9995		        2.0   	5.0   	1.0   	6.0   	5.0
-9996			      2.0   	3.0   	6.0	    6.0	    1.0
-9997			      6.0   	3.0   	2.0	    6.0	    1.0
-9998			      4.0   	1.0   	6.0	    6.0	    6.0
-9999			      2.0   	3.0   	6.0	    2.0   	6.0
+
+			dice_0	dice_1	dice_2	dice_3	dice_4
+			roll_num_index					
+			0	6.0	1.0	2.0	5.0	5.0
+			1	5.0	3.0	6.0	5.0	1.0
+			2	3.0	5.0	6.0	3.0	6.0
+			3	4.0	3.0	6.0	2.0	1.0
+			4	6.0	4.0	6.0	2.0	6.0
+			...	...	...	...	...	...
+			9995	2.0	5.0	1.0	6.0	5.0
+			9996	2.0	3.0	6.0	6.0	1.0
+			9997	6.0	3.0	2.0	6.0	1.0
+			9998	4.0	1.0	6.0	6.0	6.0
+			9999	2.0	3.0	6.0	2.0	6.0
 
 # Analyzing Games 
 
